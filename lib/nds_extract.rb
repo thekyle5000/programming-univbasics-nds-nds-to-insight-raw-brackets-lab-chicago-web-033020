@@ -6,8 +6,15 @@ def directors_totals(nds)
   element_index = 0
   while element_index < directors_database.length do
     movie_index = 0
-    
-    directors_database[element_index][:name] = 
+    gross = 0
+    while movie_index < directors_database[element_index][:movies].length do
+      gross += directors_database[element_index][:movies][:worldwide_gross]
+      movie_index += 1
+    end
+    result[element_index][:name] = gross
+    element_index += 1 
+  end 
+  result
   
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
