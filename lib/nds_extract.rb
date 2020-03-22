@@ -11,7 +11,8 @@ def directors_totals(nds)
       gross += directors_database[element_index][:movies][movie_index][:worldwide_gross]
       movie_index += 1
     end
-    result[element_index][:name] = gross
+    name = directors_database[element_index][:name]
+    result[name] = gross
     element_index += 1 
   end 
   result
