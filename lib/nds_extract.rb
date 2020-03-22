@@ -2,7 +2,10 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'directors_database'
 
 def directors_totals(nds)
-  
+  result ={}
+  element_index = 0
+  while element_index < directors_database.length do 
+    directors_database[element_index][:name] = 
   
   # Remember, it's always OK to pretty print what you get *in* to make sure
   # that you know what you're starting with!
